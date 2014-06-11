@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7411f908-80b9-4d0b-8967-79991989b548">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="216"/>
+	<queryString>
+		<![CDATA[SELECT laudo.*,paciente.*
+FROM laudo
+INNER JOIN paciente
+ON laudo.paciente_id=paciente.id
+ORDER BY paciente.nome]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="data" class="java.lang.String"/>
+	<field name="tipocalc" class="java.lang.String"/>
+	<field name="tipo" class="java.lang.String"/>
+	<field name="peso" class="java.lang.Float"/>
+	<field name="siv" class="java.lang.Float"/>
+	<field name="ae" class="java.lang.Float"/>
+	<field name="ddve" class="java.lang.Float"/>
+	<field name="ddvd" class="java.lang.Float"/>
+	<field name="altura" class="java.lang.Float"/>
+	<field name="aorta" class="java.lang.Float"/>
+	<field name="dsve" class="java.lang.Float"/>
+	<field name="pp" class="java.lang.Float"/>
+	<field name="vsf" class="java.lang.Float"/>
+	<field name="vdf" class="java.lang.Float"/>
+	<field name="enccav" class="java.lang.Float"/>
+	<field name="indespessurarel" class="java.lang.Float"/>
+	<field name="superficiecorporea" class="java.lang.Float"/>
+	<field name="massa" class="java.lang.Float"/>
+	<field name="indmassave" class="java.lang.Float"/>
+	<field name="relae_ao" class="java.lang.Float"/>
+	<field name="fe" class="java.lang.Float"/>
+	<field name="texto" class="java.lang.String"/>
+	<field name="paciente_id" class="java.lang.Integer"/>
+	<field name="medico_id" class="java.lang.Integer"/>
+	<field name="medico_nome" class="java.lang.String"/>
+	<field name="medico_crm" class="java.lang.Integer"/>
+	<field name="convenio_id" class="java.lang.Integer"/>
+	<field name="convenio_nome" class="java.lang.String"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="datanasc" class="java.lang.String"/>
+	<field name="cpf" class="java.lang.String"/>
+	<field name="sexo" class="java.lang.String"/>
+	<field name="tel" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement uuid="75877aec-57f0-4217-a7b4-0ae5f587a33a" x="188" y="0" width="297" height="63"/>
+				<imageExpression><![CDATA["/home/arlindojr/Dropbox/Laudo_Medico/Laudo_Medico/src/imagens/logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="90" splitType="Stretch">
+			<frame>
+				<reportElement uuid="2312a07e-f36a-4483-ac7a-bd52d128764b" x="0" y="0" width="555" height="90"/>
+				<rectangle>
+					<reportElement uuid="7dfbfb80-23b3-4975-9229-4eca9411d883" x="14" y="15" width="520" height="66"/>
+				</rectangle>
+				<staticText>
+					<reportElement uuid="d89f8c6c-ae65-42d3-a7d4-8132be619cf7" x="24" y="29" width="64" height="12"/>
+					<textElement/>
+					<text><![CDATA[Paciente:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="f81c78d9-84ed-4757-b37c-8f3dd1587c89" x="88" y="29" width="242" height="12"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="e39ba282-d561-4af4-adcb-d38f21a2174a" x="330" y="29" width="72" height="12"/>
+					<textElement/>
+					<text><![CDATA[Nascimento:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="1750c306-d435-42ed-945e-5da147d0e9c0" x="402" y="29" width="125" height="12"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{datanasc}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="0545079d-d4a9-49ca-b9c0-fdf21f9a1e57" x="330" y="41" width="46" height="14"/>
+					<textElement/>
+					<text><![CDATA[Plano:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="c204da87-9a65-40c1-bbd9-053ec36a3917" x="376" y="41" width="151" height="14"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{convenio_nome}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="6c42d70d-a410-4554-9c49-6b2d94fcb1b6" x="330" y="55" width="72" height="14"/>
+					<textElement/>
+					<text><![CDATA[Sexo:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="c2e67771-9ae0-4d70-a3de-92b38d60dcb3" x="402" y="55" width="125" height="14"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="f2dbe325-9b9f-4eec-9c24-5dc7eb9db302" x="24" y="55" width="101" height="14"/>
+					<textElement/>
+					<text><![CDATA[Data de Realização:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="16ae2de8-f37e-4562-a310-07e36f9aa089" x="125" y="55" width="188" height="14"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="9b7dd789-5696-4a06-99cb-0ecba1e9e773" x="24" y="41" width="46" height="14"/>
+					<textElement/>
+					<text><![CDATA[Medico:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="1081872d-dc0d-4b08-8c46-6cefd1986520" x="70" y="41" width="260" height="14"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{medico_nome}+"  CRM:"+$F{medico_crm}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<frame>
+				<reportElement uuid="dca97ed0-58a3-4f84-be83-e07440cbeddb" x="0" y="0" width="555" height="59"/>
+				<frame>
+					<reportElement uuid="86ef90b2-7ba4-4fb3-a47c-e9fb9811db20" x="127" y="10" width="300" height="20"/>
+					<staticText>
+						<reportElement uuid="5e00f4ca-29f7-4488-ad57-106a4d1669cc" x="0" y="0" width="100" height="20"/>
+						<textElement/>
+						<text><![CDATA[ECOCARDIOGRAMA]]></text>
+					</staticText>
+					<textField>
+						<reportElement uuid="b258feb7-b73d-4059-b40f-e9e7a0f232c0" x="100" y="0" width="200" height="20"/>
+						<textElement/>
+						<textFieldExpression><![CDATA[(($F{tipo}.equals("tt") ? "TRANSTORACICO E TRANSESOFAGICO" : $F{tipo}))]]></textFieldExpression>
+					</textField>
+				</frame>
+				<staticText>
+					<reportElement uuid="9544b3eb-8769-4f5d-8321-d93aab7a88d4" x="24" y="30" width="46" height="15"/>
+					<textElement/>
+					<text><![CDATA[Peso:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="d39b1b6c-4389-45a6-92ee-7c57b5b38baa" x="70" y="30" width="118" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{peso}+ " Kg"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="2984aa4b-908e-427d-a491-ea787928cbd7" x="24" y="45" width="45" height="13"/>
+					<textElement/>
+					<text><![CDATA[Altura:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="f1ff85b6-d394-4c0b-ba46-37c240d57fc6" x="70" y="45" width="91" height="13"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{altura}+ " cm"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="7b4e67da-4d1f-4b12-b5a6-517d16ef0eee" x="348" y="31" width="100" height="14"/>
+					<textElement/>
+					<text><![CDATA[Superf. Corp.:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="2053448d-fd9f-46d3-b458-9ed46ab8af3e" x="427" y="31" width="100" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{superficiecorporea}+ " m²"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="320" splitType="Stretch">
+			<frame>
+				<reportElement uuid="687fcd5a-483f-4220-8733-86276ea04ad6" x="0" y="0" width="555" height="283"/>
+				<image>
+					<reportElement uuid="aa3132cd-cce1-4619-8ab6-91cecc599dd2" x="88" y="0" width="467" height="283"/>
+					<imageExpression><![CDATA["/home/arlindojr/Dropbox/Laudo_Medico/Laudo_Medico/src/imagens/Normalidade_"+$F{sexo}+".jpg"]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement uuid="1d76a7b6-b390-49bd-a439-f231063a1450" x="349" y="57" width="100" height="17"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{ae}+ " cm"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="28ec953b-6536-441c-ba27-51b03ef1a55f" x="349" y="38" width="100" height="19"/>
+					<textElement/>
+					<text><![CDATA[Paciente]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="02c95732-13ac-4b3c-aadc-056521d70747" x="349" y="74" width="100" height="17"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{aorta}+ " cm"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="2f8e5503-3a84-4e1d-92dd-82b232c2e364" x="349" y="91" width="100" height="17"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{ddvd}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="406d85d2-06b4-4061-8168-14abb934afac" x="349" y="108" width="100" height="18"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{ddve}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="2eecdfb0-39cb-42e5-9eaf-8a68d590c8a1" x="349" y="126" width="100" height="17"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{dsve}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="4fe108af-efe1-495e-a77c-a6698888acdf" x="349" y="247" width="100" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{indespessurarel}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="6bae3fc9-f767-40d8-8196-8b1f0f54abb2" x="348" y="230" width="100" height="17"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{massa}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="ed9f1b79-f892-4199-9483-22792b091c98" x="349" y="212" width="100" height="18"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{indmassave}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="b5e9d171-87e1-4952-b2b4-8e92a337c534" x="349" y="195" width="100" height="17"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{vsf}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="a2886926-8fc5-4f11-b475-2b7a5dc0d542" x="348" y="178" width="100" height="17"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{vdf}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="232a323d-95ce-46eb-a4fa-e39f35124830" x="348" y="161" width="100" height="17"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{pp}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="953f2843-d03e-499c-b07a-ff9e1a9ae2e8" x="348" y="143" width="100" height="18"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{siv}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="6a60ab4e-18d1-4197-a9b8-e3a62f4280bd" x="348" y="262" width="100" height="21"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{tipocalc}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement uuid="8f2e42c1-757b-4429-a76c-2eb8606ea9e0" x="213" y="296" width="100" height="21"/>
+				<textElement/>
+				<text><![CDATA[COMENTÁRIOS]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="109" splitType="Stretch">
+			<frame>
+				<reportElement uuid="6b106636-e5b4-47fe-8475-2657b8f12208" x="0" y="0" width="555" height="109"/>
+				<textField>
+					<reportElement uuid="ffec57b3-efcc-4e88-81be-daa7d02bca4d" x="0" y="0" width="555" height="109"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{texto}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="32" splitType="Stretch"/>
+	</summary>
+</jasperReport>

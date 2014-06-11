@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7411f908-80b9-4d0b-8967-79991989b548">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="252"/>
+	<parameter name="Endereco" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT laudo.*,paciente.*
+FROM laudo
+INNER JOIN paciente
+ON laudo.paciente_id=paciente.id
+INNER JOIN ireport
+ON ireport.laudo_id=laudo.id]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="data" class="java.lang.String"/>
+	<field name="tipocalc" class="java.lang.String"/>
+	<field name="tipo" class="java.lang.String"/>
+	<field name="peso" class="java.lang.Float"/>
+	<field name="siv" class="java.lang.Float"/>
+	<field name="ae" class="java.lang.Float"/>
+	<field name="ddve" class="java.lang.Float"/>
+	<field name="ddvd" class="java.lang.Float"/>
+	<field name="altura" class="java.lang.Float"/>
+	<field name="aorta" class="java.lang.Float"/>
+	<field name="dsve" class="java.lang.Float"/>
+	<field name="pp" class="java.lang.Float"/>
+	<field name="vsf" class="java.lang.Float"/>
+	<field name="vdf" class="java.lang.Float"/>
+	<field name="enccav" class="java.lang.Float"/>
+	<field name="indespessurarel" class="java.lang.Float"/>
+	<field name="superficiecorporea" class="java.lang.Float"/>
+	<field name="massa" class="java.lang.Float"/>
+	<field name="indmassave" class="java.lang.Float"/>
+	<field name="relae_ao" class="java.lang.Float"/>
+	<field name="fe" class="java.lang.Float"/>
+	<field name="texto" class="java.lang.String"/>
+	<field name="paciente_id" class="java.lang.Integer"/>
+	<field name="medico_id" class="java.lang.Integer"/>
+	<field name="medico_nome" class="java.lang.String"/>
+	<field name="medico_crm" class="java.lang.Integer"/>
+	<field name="convenio_id" class="java.lang.Integer"/>
+	<field name="convenio_nome" class="java.lang.String"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="datanasc" class="java.lang.String"/>
+	<field name="cpf" class="java.lang.String"/>
+	<field name="sexo" class="java.lang.String"/>
+	<field name="tel" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement uuid="75877aec-57f0-4217-a7b4-0ae5f587a33a" x="188" y="0" width="297" height="63"/>
+				<imageExpression><![CDATA[$P{Endereco}+"/logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="90" splitType="Stretch">
+			<frame>
+				<reportElement uuid="2312a07e-f36a-4483-ac7a-bd52d128764b" x="0" y="0" width="555" height="90"/>
+				<rectangle>
+					<reportElement uuid="7dfbfb80-23b3-4975-9229-4eca9411d883" x="14" y="15" width="520" height="66"/>
+				</rectangle>
+				<staticText>
+					<reportElement uuid="d89f8c6c-ae65-42d3-a7d4-8132be619cf7" x="24" y="29" width="64" height="14"/>
+					<textElement/>
+					<text><![CDATA[Paciente:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="f81c78d9-84ed-4757-b37c-8f3dd1587c89" x="88" y="29" width="242" height="14"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="e39ba282-d561-4af4-adcb-d38f21a2174a" x="330" y="29" width="72" height="14"/>
+					<textElement/>
+					<text><![CDATA[Nascimento:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="1750c306-d435-42ed-945e-5da147d0e9c0" x="402" y="29" width="125" height="14"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{datanasc}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="0545079d-d4a9-49ca-b9c0-fdf21f9a1e57" x="330" y="41" width="46" height="14"/>
+					<textElement/>
+					<text><![CDATA[Plano:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="c204da87-9a65-40c1-bbd9-053ec36a3917" x="376" y="41" width="151" height="14"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{convenio_nome}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="6c42d70d-a410-4554-9c49-6b2d94fcb1b6" x="330" y="55" width="72" height="14"/>
+					<textElement/>
+					<text><![CDATA[Sexo:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="c2e67771-9ae0-4d70-a3de-92b38d60dcb3" x="402" y="55" width="125" height="14"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="f2dbe325-9b9f-4eec-9c24-5dc7eb9db302" x="24" y="55" width="101" height="14"/>
+					<textElement/>
+					<text><![CDATA[Data de Realização:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="16ae2de8-f37e-4562-a310-07e36f9aa089" x="125" y="55" width="188" height="14"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<frame>
+				<reportElement uuid="dca97ed0-58a3-4f84-be83-e07440cbeddb" x="0" y="0" width="555" height="41"/>
+				<frame>
+					<reportElement uuid="86ef90b2-7ba4-4fb3-a47c-e9fb9811db20" x="14" y="10" width="520" height="20"/>
+					<textField>
+						<reportElement uuid="b258feb7-b73d-4059-b40f-e9e7a0f232c0" x="0" y="0" width="520" height="20"/>
+						<box>
+							<pen lineWidth="2.0"/>
+							<topPen lineWidth="2.0"/>
+							<leftPen lineWidth="2.0"/>
+							<bottomPen lineWidth="2.0"/>
+							<rightPen lineWidth="2.0"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle"/>
+						<textFieldExpression><![CDATA[(($F{tipo}.equals("sub") ? "LAUDO SUBJETIVO" :
+$F{tipo}))]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="498" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="ffec57b3-efcc-4e88-81be-daa7d02bca4d" x="14" y="0" width="520" height="492"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{texto}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="19">
+			<textField>
+				<reportElement uuid="1081872d-dc0d-4b08-8c46-6cefd1986520" x="267" y="5" width="260" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{medico_nome}+"  (CRM:"+$F{medico_crm}+")"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="82de9644-e7cd-4d99-8c81-f0e330ba98fe" x="215" y="5" width="319" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

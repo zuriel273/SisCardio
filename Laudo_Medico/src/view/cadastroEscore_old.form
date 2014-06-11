@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="alwaysOnTop" type="boolean" value="true"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" alignment="1" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jDesktopPane1" alignment="1" min="-2" pref="1341" max="-2" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel_paciente" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="jLabel_Convenio" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jComboBox_convenio" min="-2" pref="500" max="-2" attributes="0"/>
+                              <Component id="jLabel_nome_paciente" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel_medicoResp" min="-2" pref="150" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextField_crm" min="-2" pref="60" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextField_nome" min="-2" pref="370" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jButton_medicos" min="-2" pref="46" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jLabel_tipo" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jRadioButton_tt" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton_SEPD" alignment="0" min="-2" pref="240" max="-2" attributes="0"/>
+                      <Component id="jRadioButton_sub" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jRadioButton_esc" min="-2" pref="160" max="-2" attributes="0"/>
+                      <Component id="jRadioButton_SEPE1" alignment="0" min="-2" pref="260" max="-2" attributes="0"/>
+                      <Component id="jRadioButton_t" alignment="0" min="-2" pref="260" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jButton_medicos" alignment="1" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jLabel_paciente" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="jLabel_nome_paciente" max="32767" attributes="0"/>
+                                  <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_Convenio" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jComboBox_convenio" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_medicoResp" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_crm" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_nome" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_tipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton_tt" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton_t" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jRadioButton_SEPD" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton_SEPE1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jRadioButton_sub" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton_esc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jDesktopPane1" min="-2" pref="1124" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JDesktopPane" name="jDesktopPane1">
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel_esquerda">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
+                  <JLayeredPaneConstraints x="0" y="480" width="590" height="600" layer="0" position="-1"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel18" min="-2" pref="464" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButton_Salvar" min="-2" pref="225" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButton_voltar" min="-2" pref="219" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jLabel_imagem_indice_escore" alignment="0" min="-2" pref="505" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="85" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="jLabel18" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel_imagem_indice_escore" min="-2" pref="526" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jButton_Salvar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButton_voltar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel_imagem_indice_escore">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imagens/indice_escore.png"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel18">
+                  <Properties>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="INDICE DE ESCORE DE CONTRATILIDADE"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButton_Salvar">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Salvar"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_SalvarActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButton_voltar">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Voltar"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_voltarActionPerformed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel_direita">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
+                  <JLayeredPaneConstraints x="640" y="460" width="480" height="600" layer="0" position="-1"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel_segmento_1" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <Component id="jLabel_segmento" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel_repouso" min="-2" pref="80" max="-2" attributes="0"/>
+                                      <Component id="jTextField_repouso_1" min="-2" pref="86" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jTextField_baixa_dose_2" alignment="1" min="-2" pref="85" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jTextField_baixa_dose_4" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                              <Component id="jTextField_baixa_dose_3" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                              <Component id="jLabel_baixa" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jTextField_baixa_dose_1" alignment="0" min="-2" pref="84" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel_pico" min="-2" pref="41" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="jLabel_recuperacao" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jTextField_pico_1" min="-2" pref="80" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="jTextField_recuperacao_1" min="-2" pref="80" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel_segmento_17" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="jTextField_pico_17" min="-2" pref="80" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField_recuperacao_17" min="-2" pref="80" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel_segmento_15" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jTextField_repouso_15" min="-2" pref="86" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel_segmento_14" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jTextField_repouso_14" min="-2" pref="86" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel_segmento_13" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jTextField_repouso_13" min="-2" pref="86" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel_segmento_12" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jTextField_repouso_12" min="-2" pref="86" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel_segmento_11" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jTextField_repouso_11" min="-2" pref="86" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel_segmento_10" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jTextField_repouso_10" min="-2" pref="86" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel_segmento_9" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jTextField_repouso_9" min="-2" pref="86" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel_segmento_8" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jTextField_repouso_8" min="-2" pref="86" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel_segmento_7" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jTextField_repouso_7" min="-2" pref="86" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel_segmento_6" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jTextField_repouso_6" min="-2" pref="86" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel_segmento_5" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jTextField_repouso_5" min="-2" pref="86" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel_segmento_4" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jTextField_repouso_4" min="-2" pref="86" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jLabel_segmento_3" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jTextField_repouso_3" min="-2" pref="86" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jLabel_segmento_2" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jTextField_repouso_2" min="-2" pref="86" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel_segmento_16" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jTextField_repouso_17" min="-2" pref="86" max="-2" attributes="0"/>
+                                                      <Component id="jTextField_repouso_16" min="-2" pref="86" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" alignment="1" attributes="0">
+                                                          <Component id="jTextField_pico_2" min="-2" pref="80" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jTextField_recuperacao_2" min="-2" pref="80" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" attributes="0">
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="jTextField_pico_4" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_pico_3" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="jTextField_recuperacao_4" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_recuperacao_3" min="-2" pref="80" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" attributes="0">
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="jTextField_baixa_dose_15" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_baixa_dose_16" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_baixa_dose_17" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_baixa_dose_14" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_baixa_dose_13" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_baixa_dose_12" alignment="1" min="-2" pref="85" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="jTextField_pico_12" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_pico_13" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_pico_14" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_pico_15" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_pico_16" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="jTextField_recuperacao_12" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_recuperacao_13" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_recuperacao_14" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_recuperacao_15" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_recuperacao_16" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                      <Group type="102" attributes="0">
+                                                          <Group type="103" groupAlignment="1" attributes="0">
+                                                              <Component id="jTextField_baixa_dose_6" min="-2" pref="85" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_baixa_dose_5" min="-2" pref="85" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_baixa_dose_7" min="-2" pref="85" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="jTextField_pico_5" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_pico_6" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_pico_7" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="jTextField_recuperacao_7" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_recuperacao_5" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_recuperacao_6" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                      <Group type="102" alignment="1" attributes="0">
+                                                          <Group type="103" groupAlignment="1" attributes="0">
+                                                              <Component id="jTextField_baixa_dose_11" min="-2" pref="85" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_baixa_dose_9" min="-2" pref="85" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_baixa_dose_8" min="-2" pref="85" max="-2" attributes="0"/>
+                                                              <Component id="jTextField_baixa_dose_10" min="-2" pref="85" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Group type="102" alignment="1" attributes="0">
+                                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                                      <Component id="jTextField_recuperacao_9" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                                                      <Group type="102" alignment="1" attributes="0">
+                                                                          <Component id="jTextField_pico_10" min="-2" pref="77" max="-2" attributes="0"/>
+                                                                          <EmptySpace max="32767" attributes="0"/>
+                                                                          <Component id="jTextField_recuperacao_10" min="-2" pref="80" max="-2" attributes="0"/>
+                                                                      </Group>
+                                                                      <Component id="jTextField_pico_9" alignment="0" min="-2" pref="77" max="-2" attributes="0"/>
+                                                                      <Group type="102" alignment="1" attributes="0">
+                                                                          <Component id="jTextField_pico_8" min="-2" pref="78" max="-2" attributes="0"/>
+                                                                          <EmptySpace max="32767" attributes="0"/>
+                                                                          <Component id="jTextField_recuperacao_8" min="-2" pref="80" max="-2" attributes="0"/>
+                                                                      </Group>
+                                                                  </Group>
+                                                              </Group>
+                                                              <Group type="102" alignment="1" attributes="0">
+                                                                  <Component id="jTextField_pico_11" min="-2" pref="80" max="-2" attributes="0"/>
+                                                                  <EmptySpace max="32767" attributes="0"/>
+                                                                  <Component id="jTextField_recuperacao_11" min="-2" pref="80" max="-2" attributes="0"/>
+                                                              </Group>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_repouso" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_baixa" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_pico" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_recuperacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_1" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_1" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_1" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_1" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_1" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_2" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_2" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_2" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_2" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_2" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_3" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_3" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_3" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_3" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_3" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_4" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_4" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_4" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_4" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_4" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_5" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_5" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_5" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_5" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_5" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_6" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_6" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_6" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_6" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_6" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_7" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_7" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_7" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_7" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_7" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_8" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_8" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_8" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_8" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_8" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_9" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_9" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_9" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_9" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_9" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_10" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_10" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_10" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_10" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_10" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_11" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_11" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_11" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_11" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_11" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_12" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_12" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_12" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_12" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_12" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_13" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_13" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_13" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_13" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_13" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_14" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_14" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_14" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_14" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_14" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_15" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_15" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_15" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_15" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_15" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_segmento_16" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField_repouso_16" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_16" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_16" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_16" alignment="3" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jTextField_repouso_17" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_baixa_dose_17" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_recuperacao_17" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_pico_17" alignment="3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jLabel_segmento_17" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Segmento"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_repouso">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Repouso"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_baixa">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Baixa Dose"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_pico">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Pico"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_recuperacao">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Recupera&#xe7;&#xe3;o"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="1"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="2"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="3"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_4">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="4"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_5">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="5"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_6">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="6"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_7">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="7"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="8"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_9">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="9"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_10">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="10"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_11">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="11"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_12">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="12"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_13">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="13"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_14">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="14"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_15">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="15"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_17">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="17"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_segmento_16">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="16"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_2">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_2">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_2">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_2">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_4">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_4">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_4">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_4">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_5">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_5">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_5">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_5">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_6">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_6">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_6">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_6">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_7">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_7">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_7">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_7">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_8">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_8">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_8">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_8">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_9">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_9">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_9">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_9">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_10">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_10">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_10">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_10">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_11">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_11">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_11">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_11">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_12">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_12">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_12">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_12">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_13">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_13">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_13">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_13">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_14">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_14">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_14">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_14">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_15">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_15">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_15">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_15">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_16">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_16">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_16">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_16">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_recuperacao_17">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_pico_17">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_baixa_dose_17">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_repouso_17">
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JTextField" name="jTextField_crm">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_crmActionPerformed"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextField_crmFocusLost"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField_nome">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_medicoResp">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="M&#xe9;dico Respons&#xe1;vel:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox_convenio">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="1">
+                <StringItem index="0" value=".: Selecione :."/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_Convenio">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Conv&#xea;nio"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_paciente">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Paciente"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_tipo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tipos de laudos:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton_medicos">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagens/busca.png"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_medicosActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="jRadioButton_sub">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="fe" green="fe" red="fe" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Subjetivo"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_subActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="jRadioButton_SEPD">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="fe" green="fe" red="fe" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Sob estresse pela Dobutamina"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_SEPDActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="jRadioButton_tt">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="fe" green="fe" red="fe" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Transtor&#xe1;cico e Transesof&#xe1;gico"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_ttActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="jRadioButton_t">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="fe" green="fe" red="fe" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Transtor&#xe1;cico"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_tActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="jRadioButton_SEPE1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="fe" green="fe" red="fe" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Sob estresse pelo Esfor&#xe7;o"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_SEPE1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_nome_paciente">
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="jRadioButton_esc">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="fe" green="fe" red="fe" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Escore"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_escActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

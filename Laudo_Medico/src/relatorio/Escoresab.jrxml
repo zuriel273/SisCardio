@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="escore" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7411f908-80b9-4d0b-8967-79991989b548">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="714"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="table segmento" uuid="afc10b93-7545-474b-a419-61c9e396e38e">
+		<parameter name="LaudoEscore_id" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT
+     s.`repouso` AS s_repouso,
+     s.`baixa_dose` AS s_baixa_dose,
+     s.`pico` AS s_pico,
+     s.`recuperacao` AS s_recuperacao
+FROM
+     `segmento` s
+WHERE
+     s.laudoEscore_Id = $P{LaudoEscore_id}]]>
+		</queryString>
+		<field name="s_repouso" class="java.lang.Double"/>
+		<field name="s_baixa_dose" class="java.lang.Double"/>
+		<field name="s_pico" class="java.lang.Double"/>
+		<field name="s_recuperacao" class="java.lang.Double"/>
+	</subDataset>
+	<parameter name="LaudoEscore_id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Logo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="imgEscore" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="imgFooter" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     l.`data` AS l_data,
+     l.`paciente_id` AS l_paciente_id,
+     l.`medico_id` AS l_medico_id,
+     l.`medico_nome` AS l_medico_nome,
+     l.`medico_crm` AS l_medico_crm,
+     l.`convenio_id` AS l_convenio_id,
+     l.`convenio_nome` AS l_convenio_nome,
+     p.`nome` AS p_nome,
+     p.`datanasc` AS p_datanasc,
+     p.`cpf` AS p_cpf,
+     p.`sexo` AS p_sexo,
+     p.`tel` AS p_tel,
+     c.`nome` AS c_nome,
+     c.`status` AS c_status,
+     e.`laudo_id` AS e_laudo_id,
+     e.`id` AS e_id
+FROM
+     `laudo` l INNER JOIN `escore` e ON l.`id` = e.`laudo_id`
+     INNER JOIN `convenio` c ON l.`convenio_id` = c.`id`
+     INNER JOIN `paciente` p ON l.`paciente_id` = p.`id`
+WHERE
+     e.id = $P{LaudoEscore_id}]]>
+	</queryString>
+	<field name="l_data" class="java.lang.String"/>
+	<field name="l_paciente_id" class="java.lang.Integer"/>
+	<field name="l_medico_id" class="java.lang.Integer"/>
+	<field name="l_medico_nome" class="java.lang.String"/>
+	<field name="l_medico_crm" class="java.lang.Integer"/>
+	<field name="l_convenio_id" class="java.lang.Integer"/>
+	<field name="l_convenio_nome" class="java.lang.String"/>
+	<field name="p_nome" class="java.lang.String"/>
+	<field name="p_datanasc" class="java.lang.String"/>
+	<field name="p_cpf" class="java.lang.String"/>
+	<field name="p_sexo" class="java.lang.String"/>
+	<field name="p_tel" class="java.lang.String"/>
+	<field name="c_nome" class="java.lang.String"/>
+	<field name="c_status" class="java.lang.String"/>
+	<field name="e_laudo_id" class="java.lang.Integer"/>
+	<field name="e_id" class="java.lang.Integer"/>
+	<title>
+		<band height="65" splitType="Stretch">
+			<image>
+				<reportElement uuid="75877aec-57f0-4217-a7b4-0ae5f587a33a" x="180" y="1" width="194" height="63"/>
+				<imageExpression><![CDATA[$P{Logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="96">
+			<frame>
+				<reportElement uuid="2312a07e-f36a-4483-ac7a-bd52d128764b" x="0" y="4" width="558" height="90"/>
+				<rectangle>
+					<reportElement uuid="7dfbfb80-23b3-4975-9229-4eca9411d883" x="3" y="14" width="548" height="66"/>
+				</rectangle>
+				<staticText>
+					<reportElement uuid="d89f8c6c-ae65-42d3-a7d4-8132be619cf7" x="24" y="29" width="64" height="14"/>
+					<textElement/>
+					<text><![CDATA[Paciente:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="f81c78d9-84ed-4757-b37c-8f3dd1587c89" x="76" y="29" width="242" height="14"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{p_nome}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="e39ba282-d561-4af4-adcb-d38f21a2174a" x="330" y="29" width="72" height="14"/>
+					<textElement/>
+					<text><![CDATA[Nascimento:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="1750c306-d435-42ed-945e-5da147d0e9c0" x="402" y="29" width="125" height="14"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{p_datanasc}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="0545079d-d4a9-49ca-b9c0-fdf21f9a1e57" x="331" y="41" width="46" height="14"/>
+					<textElement/>
+					<text><![CDATA[Plano:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="c204da87-9a65-40c1-bbd9-053ec36a3917" x="377" y="41" width="151" height="14"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{l_convenio_nome}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="6c42d70d-a410-4554-9c49-6b2d94fcb1b6" x="330" y="55" width="72" height="14"/>
+					<textElement/>
+					<text><![CDATA[Sexo:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="c2e67771-9ae0-4d70-a3de-92b38d60dcb3" x="376" y="55" width="125" height="14"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{p_sexo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="f2dbe325-9b9f-4eec-9c24-5dc7eb9db302" x="24" y="55" width="132" height="14"/>
+					<textElement/>
+					<text><![CDATA[Data de Realização:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="16ae2de8-f37e-4562-a310-07e36f9aa089" x="139" y="55" width="158" height="14"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{l_data}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="39">
+			<frame>
+				<reportElement uuid="dca97ed0-58a3-4f84-be83-e07440cbeddb" x="3" y="2" width="547" height="36"/>
+				<staticText>
+					<reportElement uuid="5e00f4ca-29f7-4488-ad57-106a4d1669cc" x="2" y="7" width="545" height="20"/>
+					<box>
+						<pen lineWidth="2.0"/>
+						<topPen lineWidth="2.0"/>
+						<leftPen lineWidth="2.0"/>
+						<bottomPen lineWidth="2.0"/>
+						<rightPen lineWidth="2.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="13" isBold="false"/>
+					</textElement>
+					<text><![CDATA[ÍNDICE DE ESCORE DE CONTRATILIDADE]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="432" splitType="Stretch">
+			<frame>
+				<reportElement uuid="3634108e-6f6c-486f-83c8-2dd47dc456b5" x="-3" y="0" width="556" height="432"/>
+				<image>
+					<reportElement uuid="a36c37b1-4c55-4ea9-9f74-b3199f191aa5" x="8" y="2" width="259" height="260"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+					<imageExpression><![CDATA[$P{imgEscore}]]></imageExpression>
+				</image>
+				<componentElement>
+					<reportElement uuid="818155fd-e5cd-4752-b30a-be3453980578" key="table" style="table_CH" x="278" y="2" width="278" height="430"/>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="table segmento" uuid="a4e6ff3d-f38e-4735-9958-479d38fd180b">
+							<datasetParameter name="LaudoEscore_id">
+								<datasetParameterExpression><![CDATA[$F{e_id}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+						<jr:columnGroup uuid="3cecbdbe-358d-4994-a7c0-d7c091dd6e10" width="280">
+							<jr:tableHeader height="30" rowSpan="1">
+								<staticText>
+									<reportElement uuid="b18796c5-bdac-4a2e-8cfc-94478e5eb8da" x="0" y="0" width="280" height="30"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font isBold="true"/>
+									</textElement>
+									<text><![CDATA[Segmentos]]></text>
+								</staticText>
+							</jr:tableHeader>
+							<jr:columnGroup uuid="58d92791-d7c9-44d3-baa9-9654bb329e74" width="280">
+								<jr:column uuid="01ecb2e4-b455-4a7c-9cae-28fc69f24f90" width="50">
+									<jr:tableHeader height="30" rowSpan="1"/>
+									<jr:detailCell height="23" rowSpan="1">
+										<textField>
+											<reportElement uuid="2a5318f1-356e-4ae6-89b0-e69fbfa5ac83" x="9" y="0" width="40" height="20"/>
+											<textElement verticalAlignment="Middle">
+												<font size="12" isBold="true"/>
+											</textElement>
+											<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+										</textField>
+									</jr:detailCell>
+								</jr:column>
+								<jr:column uuid="d7108443-50eb-4347-9073-562d4fcc1160" width="50">
+									<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+										<staticText>
+											<reportElement uuid="554a72f7-de92-47ca-aa0e-fa5bf40f4960" x="0" y="0" width="50" height="30"/>
+											<textElement textAlignment="Center" verticalAlignment="Middle"/>
+											<text><![CDATA[Repouso]]></text>
+										</staticText>
+									</jr:tableHeader>
+									<jr:detailCell style="table_TD" height="23" rowSpan="1">
+										<textField>
+											<reportElement uuid="4b5c3528-e613-4576-a684-037b3cc82cc7" x="0" y="0" width="50" height="20"/>
+											<textElement textAlignment="Center" verticalAlignment="Middle">
+												<font size="11"/>
+											</textElement>
+											<textFieldExpression><![CDATA[$F{s_repouso}]]></textFieldExpression>
+										</textField>
+									</jr:detailCell>
+								</jr:column>
+								<jr:column uuid="dfc2064e-eb17-49b1-969a-67a4a55f204a" width="60">
+									<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+										<staticText>
+											<reportElement uuid="bf8adf38-5a51-4dcf-8ce5-7e79aba8a2aa" x="0" y="0" width="60" height="30"/>
+											<textElement textAlignment="Center" verticalAlignment="Middle"/>
+											<text><![CDATA[Baixa Dose]]></text>
+										</staticText>
+									</jr:tableHeader>
+									<jr:detailCell style="table_TD" height="23" rowSpan="1">
+										<textField>
+											<reportElement uuid="67b21fda-b1e6-41ba-b6c5-83ec4059f8e8" x="0" y="0" width="60" height="20"/>
+											<textElement textAlignment="Center" verticalAlignment="Middle">
+												<font size="11"/>
+											</textElement>
+											<textFieldExpression><![CDATA[$F{s_baixa_dose}]]></textFieldExpression>
+										</textField>
+									</jr:detailCell>
+								</jr:column>
+								<jr:column uuid="e7ad31e6-8e7d-41b6-b0cd-597c70b5bafe" width="50">
+									<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+										<staticText>
+											<reportElement uuid="0b1ee859-d3e8-412c-9469-7cbd7e124862" x="0" y="0" width="50" height="30"/>
+											<textElement textAlignment="Center" verticalAlignment="Middle"/>
+											<text><![CDATA[Pico]]></text>
+										</staticText>
+									</jr:tableHeader>
+									<jr:detailCell style="table_TD" height="23" rowSpan="1">
+										<textField>
+											<reportElement uuid="cd64c34c-816e-4ac4-9254-dd400f8c2be1" x="0" y="0" width="50" height="20"/>
+											<textElement textAlignment="Center" verticalAlignment="Middle">
+												<font size="11"/>
+											</textElement>
+											<textFieldExpression><![CDATA[$F{s_pico}]]></textFieldExpression>
+										</textField>
+									</jr:detailCell>
+								</jr:column>
+								<jr:column uuid="7fe4f744-02b4-43cb-a3e7-54338c66081d" width="70">
+									<jr:tableHeader style="table_TH" height="30" rowSpan="1">
+										<staticText>
+											<reportElement uuid="33c67df3-f0c9-4c00-b313-a097263d72f4" x="0" y="0" width="70" height="30"/>
+											<textElement textAlignment="Center" verticalAlignment="Middle"/>
+											<text><![CDATA[Recuperação]]></text>
+										</staticText>
+									</jr:tableHeader>
+									<jr:detailCell style="table_TD" height="23" rowSpan="1">
+										<textField>
+											<reportElement uuid="6a4d9cfa-7fbd-4d7c-9c35-faebd439e4ba" x="0" y="0" width="70" height="20"/>
+											<textElement textAlignment="Center" verticalAlignment="Middle">
+												<font size="11"/>
+											</textElement>
+											<textFieldExpression><![CDATA[$F{s_recuperacao}]]></textFieldExpression>
+										</textField>
+									</jr:detailCell>
+								</jr:column>
+							</jr:columnGroup>
+						</jr:columnGroup>
+					</jr:table>
+				</componentElement>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="120">
+			<image>
+				<reportElement uuid="790351f1-7655-498f-a5c0-e55ab64218ba" x="5" y="0" width="545" height="89"/>
+				<imageExpression><![CDATA[$P{imgFooter}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="1081872d-dc0d-4b08-8c46-6cefd1986520" x="241" y="106" width="260" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{l_medico_nome}+"  (CRM:"+$F{l_medico_crm}+")"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="d9f09455-b3b5-465b-a9a5-0863231d0341" x="190" y="105" width="348" height="1"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

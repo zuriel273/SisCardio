@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ef14cc60-22f3-4a83-8c1c-7646ff736c9b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="712e1723-2d2f-4d0b-8ed5-1a53954d4f5f">
+		<parameter name="laudoId" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT
+     paciente.`id` AS paciente_id,
+     paciente.`nome` AS paciente_nome,
+     paciente.`datanasc` AS paciente_datanasc,
+     paciente.`cpf` AS paciente_cpf,
+     paciente.`sexo` AS paciente_sexo,
+     paciente.`tel` AS paciente_tel,
+     esforco.`id` AS esforco_id,
+     esforco.`pa` AS esforco_pa,
+     esforco.`fc` AS esforco_fc,
+     esforco.`eletrocardiograma` AS esforco_eletrocardiograma,
+     esforco.`atropina` AS esforco_atropina,
+     esforco.`laudoEstresse_id` AS esforco_laudoEstresse_id,
+     esforco.`tipo` AS esforco_tipo,
+     estresse.`laudo_id` AS estresse_laudo_id,
+     estresse.`esv` AS estresse_esv,
+     estresse.`essv` AS estresse_essv,
+     estresse.`tvns` AS estresse_tvns,
+     estresse.`tv` AS estresse_tv,
+     estresse.`fa` AS estresse_fa,
+     estresse.`bradicardia` AS estresse_bradicardia,
+     estresse.`outro_arritmia` AS estresse_outro_arritmia,
+     estresse.`dor_precordial` AS estresse_dor_precordial,
+     estresse.`hipotensao` AS estresse_hipotensao,
+     estresse.`hipertensao` AS estresse_hipertensao,
+     estresse.`nauseas` AS estresse_nauseas,
+     estresse.`outro_efeito_colateral` AS estresse_outro_efeito_colateral,
+     estresse.`texto` AS estresse_texto,
+     estresse.`isEco` AS estresse_isEco
+FROM
+     `paciente` paciente,
+     `esforco` esforco,
+     `estresse` estresse
+WHERE estresse.laudo_id = $P{laudoId}]]>
+		</queryString>
+		<field name="paciente_id" class="java.lang.Integer"/>
+		<field name="paciente_nome" class="java.lang.String"/>
+		<field name="paciente_datanasc" class="java.lang.String"/>
+		<field name="paciente_cpf" class="java.lang.String"/>
+		<field name="paciente_sexo" class="java.lang.String"/>
+		<field name="paciente_tel" class="java.lang.String"/>
+		<field name="esforco_id" class="java.lang.Integer"/>
+		<field name="esforco_pa" class="java.lang.Double"/>
+		<field name="esforco_fc" class="java.lang.Double"/>
+		<field name="esforco_eletrocardiograma" class="java.lang.Double"/>
+		<field name="esforco_atropina" class="java.lang.Double"/>
+		<field name="esforco_laudoEstresse_id" class="java.lang.Integer"/>
+		<field name="esforco_tipo" class="java.lang.String"/>
+		<field name="estresse_laudo_id" class="java.lang.Integer"/>
+		<field name="estresse_esv" class="java.lang.Boolean"/>
+		<field name="estresse_essv" class="java.lang.Boolean"/>
+		<field name="estresse_tvns" class="java.lang.Boolean"/>
+		<field name="estresse_tv" class="java.lang.Boolean"/>
+		<field name="estresse_fa" class="java.lang.Boolean"/>
+		<field name="estresse_bradicardia" class="java.lang.Boolean"/>
+		<field name="estresse_outro_arritmia" class="java.lang.String"/>
+		<field name="estresse_dor_precordial" class="java.lang.Boolean"/>
+		<field name="estresse_hipotensao" class="java.lang.Boolean"/>
+		<field name="estresse_hipertensao" class="java.lang.Boolean"/>
+		<field name="estresse_nauseas" class="java.lang.Boolean"/>
+		<field name="estresse_outro_efeito_colateral" class="java.lang.String"/>
+		<field name="estresse_texto" class="java.lang.String"/>
+		<field name="estresse_isEco" class="java.lang.Boolean"/>
+	</subDataset>
+	<parameter name="Id" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     laudo.`id` AS laudo_id,
+     laudo.`data` AS laudo_data,
+     laudo.`tipocalc` AS laudo_tipocalc,
+     laudo.`tipo` AS laudo_tipo,
+     laudo.`peso` AS laudo_peso,
+     laudo.`siv` AS laudo_siv,
+     laudo.`ae` AS laudo_ae,
+     laudo.`ddve` AS laudo_ddve,
+     laudo.`ddvd` AS laudo_ddvd,
+     laudo.`altura` AS laudo_altura,
+     laudo.`aorta` AS laudo_aorta,
+     laudo.`dsve` AS laudo_dsve,
+     laudo.`pp` AS laudo_pp,
+     laudo.`vsf` AS laudo_vsf,
+     laudo.`vdf` AS laudo_vdf,
+     laudo.`enccav` AS laudo_enccav,
+     laudo.`indespessurarel` AS laudo_indespessurarel,
+     laudo.`superficiecorporea` AS laudo_superficiecorporea,
+     laudo.`massa` AS laudo_massa,
+     laudo.`indmassave` AS laudo_indmassave,
+     laudo.`relae_ao` AS laudo_relae_ao,
+     laudo.`fe` AS laudo_fe,
+     laudo.`texto` AS laudo_texto,
+     laudo.`paciente_id` AS laudo_paciente_id,
+     laudo.`medico_id` AS laudo_medico_id,
+     laudo.`medico_nome` AS laudo_medico_nome,
+     laudo.`medico_crm` AS laudo_medico_crm,
+     laudo.`convenio_id` AS laudo_convenio_id,
+     laudo.`convenio_nome` AS laudo_convenio_nome
+FROM
+     `laudo` laudo
+WHERE laudo.id = $P{Id}]]>
+	</queryString>
+	<field name="laudo_id" class="java.lang.Integer"/>
+	<field name="laudo_data" class="java.lang.String"/>
+	<field name="laudo_tipocalc" class="java.lang.String"/>
+	<field name="laudo_tipo" class="java.lang.String"/>
+	<field name="laudo_peso" class="java.lang.Float"/>
+	<field name="laudo_siv" class="java.lang.Float"/>
+	<field name="laudo_ae" class="java.lang.Float"/>
+	<field name="laudo_ddve" class="java.lang.Float"/>
+	<field name="laudo_ddvd" class="java.lang.Float"/>
+	<field name="laudo_altura" class="java.lang.Float"/>
+	<field name="laudo_aorta" class="java.lang.Float"/>
+	<field name="laudo_dsve" class="java.lang.Float"/>
+	<field name="laudo_pp" class="java.lang.Float"/>
+	<field name="laudo_vsf" class="java.lang.Float"/>
+	<field name="laudo_vdf" class="java.lang.Float"/>
+	<field name="laudo_enccav" class="java.lang.Float"/>
+	<field name="laudo_indespessurarel" class="java.lang.Float"/>
+	<field name="laudo_superficiecorporea" class="java.lang.Float"/>
+	<field name="laudo_massa" class="java.lang.Float"/>
+	<field name="laudo_indmassave" class="java.lang.Float"/>
+	<field name="laudo_relae_ao" class="java.lang.Float"/>
+	<field name="laudo_fe" class="java.lang.Float"/>
+	<field name="laudo_texto" class="java.lang.String"/>
+	<field name="laudo_paciente_id" class="java.lang.Integer"/>
+	<field name="laudo_medico_id" class="java.lang.Integer"/>
+	<field name="laudo_medico_nome" class="java.lang.String"/>
+	<field name="laudo_medico_crm" class="java.lang.Integer"/>
+	<field name="laudo_convenio_id" class="java.lang.Integer"/>
+	<field name="laudo_convenio_nome" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="154" splitType="Stretch">
+			<componentElement>
+				<reportElement uuid="f6252d0a-b912-4782-bc0f-08d601478991" key="table" style="table" x="112" y="4" width="360" height="140"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Table Dataset 1" uuid="c64ea12c-46da-4f0a-b354-dc4eb9ca0ae6">
+						<datasetParameter name="laudoId">
+							<datasetParameterExpression><![CDATA[$F{laudo_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column uuid="7693bd98-db80-40b4-9c39-45db79a37ab3" width="90">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:tableFooter style="table_TH" height="30"/>
+						<jr:columnHeader style="table_CH" height="30">
+							<textField>
+								<reportElement uuid="b4e1227d-a0d1-4e1a-ac78-3cf8e063a05e" x="0" y="0" width="90" height="30"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{paciente_nome}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:columnFooter style="table_CH" height="30"/>
+						<jr:detailCell style="table_TD" height="20"/>
+					</jr:column>
+					<jr:column uuid="f77be034-f93c-4164-982d-1c5a9b05b660" width="90">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:tableFooter style="table_TH" height="30"/>
+						<jr:columnHeader style="table_CH" height="30">
+							<textField>
+								<reportElement uuid="f4586593-8cb7-4154-bff6-8683f45e38af" x="0" y="0" width="90" height="30"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{paciente_datanasc}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:columnFooter style="table_CH" height="30"/>
+						<jr:detailCell style="table_TD" height="20"/>
+					</jr:column>
+					<jr:column uuid="49cd5558-8040-45a2-b47b-c4870d3c7a3e" width="90">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:tableFooter style="table_TH" height="30"/>
+						<jr:columnHeader style="table_CH" height="30">
+							<textField>
+								<reportElement uuid="6359e07d-6ede-443f-a1d3-f7f5ec066c1b" x="0" y="0" width="90" height="30"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{paciente_cpf}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:columnFooter style="table_CH" height="30"/>
+						<jr:detailCell style="table_TD" height="20"/>
+					</jr:column>
+					<jr:column uuid="ad767129-7085-443c-9193-e67deba34f46" width="90">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:tableFooter style="table_TH" height="30"/>
+						<jr:columnHeader style="table_CH" height="30">
+							<textField>
+								<reportElement uuid="6be4e909-8dc4-435e-9390-5a815d9e3663" x="0" y="0" width="90" height="30"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{paciente_sexo}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:columnFooter style="table_CH" height="30"/>
+						<jr:detailCell style="table_TD" height="20"/>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
